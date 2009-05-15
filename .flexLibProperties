@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="com.hydraframework.plugins.navigation.PageNavigationPlugin"/>
+<classEntry path="com.hydraframework.plugins.navigation.controller.PageNavigateCommand"/>
+<classEntry path="com.hydraframework.plugins.navigation.interfaces.IContent"/>
+<classEntry path="com.hydraframework.plugins.navigation.interfaces.IContentContainer"/>
+<classEntry path="com.hydraframework.plugins.navigation.interfaces.ISitemapItemData"/>
+<classEntry path="com.hydraframework.plugins.navigation.model.SitemapItemData"/>
+<classEntry path="com.hydraframework.plugins.navigation.view.ContentComponentBase"/>
+<classEntry path="com.hydraframework.plugins.navigation.view.ContentContainer"/>
+<classEntry path="com.hydraframework.plugins.navigation.view.ContentContainerMediator"/>
+<classEntry path="com.hydraframework.plugins.navigation.view.ContentModuleBase"/>
+<classEntry path="com.hydraframework.plugins.navigation.view.events.ContentEvent"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>

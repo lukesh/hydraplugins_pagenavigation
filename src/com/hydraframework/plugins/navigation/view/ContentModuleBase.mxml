@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:mx="http://www.adobe.com/2006/mxml"
+		   layout="absolute"
+		   width="400"
+		   height="300"
+		   implements="com.hydraframework.plugins.navigation.interfaces.IContent"
+		   creationComplete="handleCreationComplete(event)">
+
+	<mx:Script>
+		<![CDATA[
+			import com.hydraframework.plugins.navigation.view.events.ContentEvent;
+
+			public function transitionOut():void {
+				_isActive = false;
+			}
+
+			public function dispatchTransitionOut():void {
+				this.dispatchEvent(new ContentEvent(ContentEvent.TRANSITION_OUT_COMPLETE));
+			}
+			private var isCreationComplete:Boolean;
+
+			private function handleCreationComplete(event:Event):void {
+				isCreationComplete = true;
+				applyArguments();
+			}
+			public var args:Object;
+
+			public function setArguments(args:Object):void {
+				this.args = args;
+
+				if (isCreationComplete) {
+					applyArguments();
+				}
+			}
+
+			public function getArguments():Object {
+				return this.args;
+			}
+
+			public function applyArguments():void {
+				this.dispatchEvent(new ContentEvent(ContentEvent.ARGUMENTS_APPLIED));
+			}
+			protected var _isActive:Boolean = true;
+
+			public function isActive():Boolean {
+				return _isActive;
+			}
+		]]>
+	</mx:Script>
+
+</mx:Module>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="400" height="300"
+	implements="com.hydraframework.plugins.navigation.interfaces.IContentContainer"
+	>
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Container;
+			
+			public function getComponentContainer():Container {
+				return wComponentContainer;
+			}
+			public function getModuleLoader():ModuleLoader {
+				return wModuleLoader;
+			}
+		]]>
+	</mx:Script>
+	<mx:Canvas id="wComponentContainer" width="100%" height="100%" />
+	<mx:ModuleLoader id="wModuleLoader" width="100%" height="100%" />
+</mx:Canvas>
