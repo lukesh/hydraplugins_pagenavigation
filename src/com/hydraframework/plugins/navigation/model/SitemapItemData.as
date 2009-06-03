@@ -9,7 +9,9 @@ package com.hydraframework.plugins.navigation.model {
 
 		public function SitemapItemData(content:*, breadcrumb:Array = null, args:Object = null, authenticationRequired:Boolean = false) {
 			this.content = content;
+			this.breadcrumb = breadcrumb;
 			this.args = args;
+			this.authenticationRequired = authenticationRequired;
 		}
 
 		public function setContent(value:*):void {
